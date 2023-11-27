@@ -39,6 +39,7 @@ public class Robot extends NAR_Robot {
   @Override
   public void robotPeriodic() {
     CommandScheduler.getInstance().run();
+    m_robotContainer.updateDashboard();
   }
 
   /** This function is called once each time the robot enters Disabled mode. */
