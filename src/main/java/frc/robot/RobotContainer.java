@@ -4,14 +4,23 @@
 
 package frc.robot;
 
+import common.hardware.input.NAR_Joystick;
+import common.utility.shuffleboard.NAR_Shuffleboard;
+
 public class RobotContainer {
+  private NAR_Joystick joystick;
 
   public RobotContainer() {
+    joystick = new NAR_Joystick(0);
     configureButtonBindings();
   }
 
   private void configureButtonBindings() {
+    
+  }
 
+  public void updateDashboard() {
+    NAR_Shuffleboard.update();
   }
 
 }
