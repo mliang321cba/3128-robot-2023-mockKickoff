@@ -4,8 +4,17 @@
 
 package frc.robot;
 
+import static edu.wpi.first.wpilibj2.command.Commands.startEnd;
+import static frc.robot.Constants.ManipulatorConstants.MOTOR_POWER;
+import static frc.robot.Constants.ManipulatorConstants.MOTOR_POWER2;
+import static frc.robot.Constants.ManipulatorConstants.STALL_POWER;
+
 import common.hardware.input.NAR_Joystick;
 import common.utility.shuffleboard.NAR_Shuffleboard;
+import frc.robot.commands.CmdManager;
+import frc.robot.subsystem.Manipulator;
+
+import static frc.robot.commands.CmdManager.*;
 
 public class RobotContainer {
   private NAR_Joystick joystick;
@@ -13,10 +22,14 @@ public class RobotContainer {
   public RobotContainer() {
     joystick = new NAR_Joystick(0);
     configureButtonBindings();
+    Manipulator.getInstance().initShuffleboard();
+    
   }
 
   private void configureButtonBindings() {
-    
+    joystick.getButton(2).onTrue(set(MOTOR_POWER)).onFalse(set(0));
+    joystick.getButton(3).onTrue(set(-MOTOR_POWER)).onFalse(set(0));
+    joystick.getButton(4).onTrue(set(-MOTOR_POWER2)).onFalse(set(0));
   }
 
   public void updateDashboard() {

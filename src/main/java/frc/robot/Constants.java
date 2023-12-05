@@ -16,4 +16,13 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
+  
+  public static class ManipulatorConstants {
+    public static final int MANIP_ID = 9;
+    public static final double MOTOR_POWER = 0.7;
+    public static final double MOTOR_POWER2 = 0.7;
+    public static final double CURRENT_THRESHOLD = 7;
+    
+    public static final double STALL_POWER = 0;
+  }
 }
