@@ -56,7 +56,7 @@ public class Manipulator extends SubsystemBase{
     }
     
     public boolean hasObjectPresent(){
-        return getCurrent() > CURRENT_THRESHOLD;
+        return getCurrent() < CURRENT_THRESHOLD;
     }
     
     public double getCurrent(){
