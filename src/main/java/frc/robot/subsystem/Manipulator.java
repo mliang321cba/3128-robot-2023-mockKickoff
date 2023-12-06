@@ -36,15 +36,11 @@ public class Manipulator extends SubsystemBase{
     }
     
     public void intake(){
-        set(MOTOR_POWER);
-    }
-    
-    public void outtake1(){
         set(-MOTOR_POWER);
     }
     
-    public void outtake2(){
-        set(-MOTOR_POWER2);
+    public void outtake(){
+        set(MOTOR_POWER);
     }
     
     public void stopMotor(){

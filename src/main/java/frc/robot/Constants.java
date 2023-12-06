@@ -19,10 +19,10 @@ public final class Constants {
   
   public static class ManipulatorConstants {
     public static final int MANIP_ID = 14;
-    public static final double MOTOR_POWER = 0.7;
-    public static final double MOTOR_POWER2 = 0.7;
+    public static final double MOTOR_POWER = 0.5;
+    public static final double MOTOR_POWER2 = 0.5;
     public static final double CURRENT_THRESHOLD = -15;
     
-    public static final double STALL_POWER = 0;
+    public static final double STALL_POWER = -0.05;
   }
 }
