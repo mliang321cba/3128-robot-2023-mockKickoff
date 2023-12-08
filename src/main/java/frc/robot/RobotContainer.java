@@ -24,8 +24,8 @@ public class RobotContainer {
   }
 
   private void configureButtonBindings() {
-    joystick.getButton(5).onTrue(intake());
-    joystick.getButton(3).onTrue(outtake()).onFalse(set(0));
+    joystick.getButton(6).onTrue(intake());
+    joystick.getButton(4).onTrue(outtake()).onFalse(set(0));
     joystick.getButton(5).onTrue(set(MOTOR_POWER)).onFalse(set(0));
     joystick.getButton(3).onTrue(set(-MOTOR_POWER)).onFalse(set(0));
   }

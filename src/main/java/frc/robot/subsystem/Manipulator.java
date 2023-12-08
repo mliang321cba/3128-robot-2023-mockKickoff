@@ -31,7 +31,6 @@ public class Manipulator extends SubsystemBase{
     
     public void configMotor(){
         m_motor = new TalonSRX(MANIP_ID);
-        
         m_motor.setNeutralMode(NeutralMode.Brake);
     }
     
